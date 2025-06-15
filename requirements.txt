@@ -1,0 +1,6 @@
+Flask
+werkzeug
+Pillow
+deepface
+transformers
+spotipy

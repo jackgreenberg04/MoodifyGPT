@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moodify</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <h1>Moodify</h1>
+  <p>Generate a personalized Spotify playlist based on your mood.</p>
+
+  <section id="image-section">
+    <h2>Upload a Selfie</h2>
+    <form action="/upload-image" method="post" enctype="multipart/form-data">
+      <input type="file" name="image" accept="image/*" required>
+      <button type="submit">Analyze Image</button>
+    </form>
+  </section>
+
+  <section id="text-section">
+    <h2>Describe Your Mood</h2>
+    <form action="/analyze-text" method="post">
+      <input type="text" name="text" placeholder="I'm feeling great today!" required>
+      <button type="submit">Analyze Text</button>
+    </form>
+  </section>
+</body>
+</html>

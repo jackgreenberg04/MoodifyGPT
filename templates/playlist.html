@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Moodify Playlist</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <h1>Playlist for {{ emotion }}</h1>
+  <iframe src="{{ embed_url }}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  <p><a href="/">Create another playlist</a></p>
+</body>
+</html>
